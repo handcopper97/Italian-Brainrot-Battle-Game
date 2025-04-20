@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>밈 몬스터 대전: Italian Brainrot Edition</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>밈 몬스터 대전</h1>
+            <h2>Italian Brainrot Edition</h2>
+        </header>
+        
+        <div class="ad-container">
+            <!-- 상단 광고 공간 -->
+            <div id="top-ad">
+                <p style="color: #666;">광고가 이곳에 표시됩니다</p>
+            </div>
+        </div>
+        
+        <div class="game-area">
+            <!-- 캐릭터 선택 화면 -->
+            <div class="select-screen">
+                <h2>당신의 몬스터를 선택하세요</h2>
+                <p>가장 강력한 밈 몬스터를 선택하여 Italian Brainrot 대결을 시작하세요!</p>
+                
+                <div class="character-selection" id="character-selection">
+                    <!-- 캐릭터 카드들이 JS로 삽입됩니다 -->
+                </div>
+                
+                <button class="next-button" id="go-to-strategy">다음: 전략 선택</button>
+            </div>
+            
+            <!-- 전략 선택 화면 -->
+            <div class="strategy-screen">
+                <h2>전투 전략을 선택하세요</h2>
+                <p><span id="selected-character-name">캐릭터</span>의 강점을 살릴 전략을 선택하세요!</p>
+                
+                <div class="environment-display">
+                    <div class="environment-image" id="environment-image"></div>
+                    <div class="environment-info">
+                        <div class="environment-name" id="environment-name">전장 환경</div>
+                        <div class="environment-desc" id="environment-description">전투가 펼쳐질 환경입니다.</div>
+                    </div>
+                </div>
+                
+                <div class="strategy-selection" id="strategy-selection">
+                    <!-- 전략 카드들이 JS로 삽입됩니다 -->
+                </div>
+                
+                <div class="buttons-container">
+                    <button class="back-button" id="back-to-select">이전: 캐릭터 선택</button>
+                    <button class="battle-button" id="start-battle">대결 시작!</button>
+                </div>
+            </div>
+            
+            <!-- 대결 화면 -->
+            <div class="battle-screen">
+                <h2>몬스터 대결!</h2>
+                
+                <div class="environment-display">
+                    <div class="environment-image" id="battle-environment-image"></div>
+                    <div class="environment-info">
+                        <div class="environment-name" id="battle-environment-name">전장 환경</div>
+                        <div class="environment-desc" id="battle-environment-description">전투가 펼쳐지는 환경입니다.</div>
+                    </div>
+                </div>
+                
+                <div class="battle-area">
+                    <div class="player-character">
+                        <div class="battle-image" id="player-image"></div>
+                        <div class="battle-name" id="player-name">캐릭터 이름</div>
+                        <div class="strategy-badge" id="player-strategy">전략: 돌격</div>
+                        <div class="battle-abilities">
+                            <h3>능력</h3>
+                            <ul class="ability-list" id="player-abilities">
+                                <!-- 동적으로 채워질 것임 -->
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="vs-icon">VS</div>
+                    
+                    <div class="opponent-character">
+                        <div class="battle-image" id="opponent-image"></div>
+                        <div class="battle-name" id="opponent-name">캐릭터 이름</div>
+                        <div class="strategy-badge" id="opponent-strategy">전략: 방어자세</div>
+                        <div class="battle-abilities">
+                            <h3>능력</h3>
+                            <ul class="ability-list" id="opponent-abilities">
+                                <!-- 동적으로 채워질 것임 -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="battle-animation">
+                    <div class="battle-animation-text">대결 중...</div>
+                </div>
+                
+                <div class="buttons-container">
+                    <button class="back-button" id="back-to-strategy">돌아가기</button>
+                    <button class="battle-button" id="show-result">결과 보기!</button>
+                </div>
+            </div>
+            
+            <!-- 결과 화면 -->
+            <div class="result-screen">
+                <div class="result-title" id="result-title">승리!</div>
+                
+                <div class="result-image" id="result-image"></div>
+                
+                <div class="result-text" id="result-text">
+                    <!-- 동적으로 채워질 것임 (API 결과) -->
+                    <div class="loading-animation">
+                        <p>강력한 AI가 대결 결과를 분석 중...</p>
+                        <div class="spinner"></div>
+                    </div>
+                </div>
+                
+                <div class="buttons-container">
+                    <button class="new-battle-button" id="new-battle">새 대결</button>
+                    <button class="share-button" id="share-result">결과 공유</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="ad-container">
+            <!-- 하단 광고 공간 -->
+            <div id="bottom-ad">
+                <p style="color: #666;">광고가 이곳에 표시됩니다</p>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2025 Italian Brainrot 밈 대전 게임. 모든 캐릭터와 설정은 원 밈에서 영감을 받았습니다.</p>
+        </footer>
+    </div>
+    
+    <!-- JavaScript 모듈 -->
+    <script type="module" src="js/game.js"></script>
+</body>
+</html>
